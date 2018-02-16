@@ -1,0 +1,30 @@
+{
+  "name": "frindjungle",
+  "version": "1.0.0",
+  "description": "frind finder is a compatibility based application that compares answers of individuals and matches them 'dating app'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Neddy Nyatome",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nedyk/FriendJungle.git"
+  },
+  "keywords": [
+    "Node.js",
+    "body-parser",
+    "express"
+  ],
+  "bugs": {
+    "url": "https://github.com/Nedyk/FriendJungle/issues"
+  },
+  "homepage": "https://github.com/Nedyk/FriendJungle#readme"
+}

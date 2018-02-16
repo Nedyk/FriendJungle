@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Friend Finder</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="text-center"><span class="glyphicon glyphicon-home"></span> Welcome to Friend Finder</h1>
+      <hr>
+      <h2 class="text-center">Fill out the information below</h2>
+      <br>
+
+    
+    </div>
+
+     
+
+    <div class="row">
+      <div class="col-lg-12">
+
+        
+        <div class="panel panel-default" id="surveyForm" >
+          <div class="panel-heading">
+            <h4 class="panel-title">Please provide the following inform</h4>
+          </div>
+          <div class="panel-body">
+
+      
+                    
+
+           <form role = "form" >
+
+            <div class="form-group">
+                          <label for="userName">Name:</label>
+                          <input type="text" id="userName" aria-describedby="emailHelp" placeholder="ex. John Smith">
+                          
+                        </div>
+                        
+
+                        <div>
+                          <label >Upload an image:
+                             <input type='file' />
+                          <br>
+                          <img id="myImg" src="#" id ="picture">
+                          </label>
+                       
+                        </div>
+     
+              <br>
+                        <br>
+             
+              <!-- Question 1 -->
+              <div class="form-group">
+                <label for="question-one">1. Physical attractiveness is important to me.</label>
+                <select data-placeholder="" class="chosen-select" id="attract">
+                  <option value=""></option>
+                  <option value="1">1 (Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Disagree)</option>
+                </select>
+              </div>
+              <!-- Question 2 -->
+              <div class="form-group">
+                <label for="question-two">2. It's Important to me that my partner has a job.</label>
+                <select data-placeholder="" class="chosen-select" id="job">
+                  <option value=""></option>
+                  <option value="1">1 (Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Disagree)</option>
+                </select>
+              </div>
+              <!-- Question 3 -->
+              <div class="form-group">
+                <label for="question-three">3. I don't want my partner to be a smoke.</label>
+                <select data-placeholder="" class="chosen-select" id="smoke">
+                  <option value=""></option>
+                  <option value="1">1 (Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Disagree)</option>
+                </select>
+              </div>
+              <!-- Question 4 -->
+              <div class="form-group">
+                <label for="question-four">4. I want children.</label>
+                <select data-placeholder="" class="chosen-select" id="children">
+                  <option value=""></option>
+                  <option value="1">1 (Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Disagree)</option>
+                </select>
+              </div>
+              <!-- Question 5 -->
+              <div class="form-group">
+                <label for="question-five">5.I want my partner to be a christian.</label>
+                <select data-placeholder="" class="chosen-select" id="religion">
+                  <option value=""></option>
+                  <option value="1">1 (Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Disagree)</option>
+                </select>
+              </div>
+
+                 <!-- Question 6 -->
+              <div class="form-group">
+                <label for="question-six">6. I'm adventurous.</label>
+                <select data-placeholder="" class="chosen-select" id="adventure">
+                  <option value=""></option>
+                  <option value="1">1 (Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Disagree)</option>
+                </select>
+              </div>
+
+               <!-- Question 7 -->
+              <div class="form-group">
+                <label for="question-seven">7. I love being around family and friends.</label>
+                <select data-placeholder="" class="chosen-select" id="friends">
+                  <option value=""></option>
+                  <option value="1">1 (Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Disagree)</option>
+                </select>
+              </div>
+
+               <!-- Question 8 -->
+              <div class="form-group">
+                <label for="question-eight">8. I love the suburbs.</label>
+                <select data-placeholder="" class="chosen-select" id="burbs">
+                  <option value=""></option>
+                  <option value="1">1 (Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Disagree)</option>
+                </select>
+              </div>
+
+               <!-- Question 9 -->
+              <div class="form-group">
+                <label for="question-nine">9. My partner has to be ambitious.</label>
+                <select data-placeholder="" class="chosen-select" id="ambitious">
+                  <option value=""></option>
+                  <option value="1">1 (Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Disagree)</option>
+                </select>
+              </div>
+
+               <!-- Question 10 -->
+              <div class="form-group">
+                <label for="question-ten">10. I am very organized.</label>
+                <select data-placeholder="" class="chosen-select" id="organized">
+                  <option value=""></option>
+                  <option value="1">1 (Agree)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Disagree)</option>
+                </select>
+              </div>
+                          
+
+                          </form>
+
+                         <button type="submit" id ="submit" class="btn btn-primary submit">Submit</button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <footer class="footer">
+      <div class="container">
+        <p> <a href="https://github.com/Nedyk/FriendJungle">GitHub Repo</a></p>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+    // $(document).ready(){
+$("#submit").on("click", function(){
+  event.preventDefault();
+
+   var newFriend ={
+         "name": $("#userName").val().trim(),
+         //Picture: $("#picture").val().trim()
+         "score": [
+                Number($("#attract").val().trim()),
+                Number($("#job").val().trim()),
+                Number($("#smoke").val().trim()),
+                Number($("#children").val().trim()),
+                Number($("#religion").val().trim()),
+                Number($("#adventure").val().trim()),
+                Number($("#friends").val().trim()),
+                Number($("#burbs").val().trim()),
+                Number($("#ambitious").val().trim()),
+                Number($("#organized").val().trim())
+
+         ]
+
+      }
+
+                $.post("/api/friends", newFriend, 
+                function(data){
+                  console.log(data);
+                  if(data){
+                    console.log('submitting')
+                  }
+                  else{console.log('umm something is broken')
+                }
+
+              //clear the form when data is submitted 
+                $("#attract").val("");
+                $("#job").val("");
+                $("#smoke").val("");
+                $("#children").val("");
+                $("#religion").val("");
+                $("#adventure").val("");
+                $("#friends").val("");
+                $("#burbs").val("");
+                $("#adventure").val("");
+                $("#ambitious").val("");
+                });
+
+});
+    //    $("#surveyForm").hide()
+    //   var newProfile ={}
+
+    //   $("#match").on("click", function(event) {
+        
+
+         
+    //   console.log(newProfile);
+    //    $("#surveyForm").show()
+    //    $("#initial").hide()
+    //    $("#userName").val("")
+
+
+    //   });
+       
+    //  $(".form-check-input").on("click", function(event) {
+    //   event.preventDefault();
+
+    //   var values = []
+    //   var getValue = $(this).val().trim()
+    //   $(this).disabled=true;
+
+    //   values.push(getValue);
+    //   values = values + ""
+    // var scores = getValue
+    // newProfile.push(scores);
+         
+
+
+
+     
+
+    
+    // }
+
+   
+
+
+
+   
+
+
+      
+
+
+// window.addEventListener('load', function() {
+//   document.querySelector('input[type="file"]').addEventListener('change', function() {
+//       if (this.files && this.files[0]) {
+//           var mypic = $('picture')[0];  
+//           mypic.src = URL.createObjectURL(this.files[0]); 
+          
+//       }
+//   });
+// });
+
+
+
+</script>
+
+
