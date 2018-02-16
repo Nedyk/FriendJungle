@@ -2,12 +2,13 @@
 var myFriends = require('../data/friends.js');
 var path 	= require('path');
 
+
+//display JSON of all possible friends 
 module.exports = function(app){
 
 	app.get("/api/:friends?", function(req, res){
 	 res.json(newFriend)
-
-	//display JSON of all possible friends 
+	
 });
 
 app.post("/api/friends", function(req, res){
@@ -47,6 +48,8 @@ var totalDifference = 0
 		}
 	//user's results will be in an array
 		newFriend.push(addFriend);	
+
+		res.json(youMatched);
 
 })
 }
