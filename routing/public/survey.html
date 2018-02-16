@@ -216,7 +216,7 @@ $("#submit").on("click", function(){
 
    var newFriend ={
          "name": $("#userName").val().trim(),
-        // "picture": $("#picture").val().trim(),
+         "picture": $("#picture").val().trim()
          "score": [
                 Number($("#attract").val().trim()),
                 Number($("#job").val().trim()),
@@ -232,22 +232,21 @@ $("#submit").on("click", function(){
          ]
 
       }
-      console.log(newFriend);
 
                 $.post("/api/friends", newFriend, function(data){
 
                  
-        //   $("#matchName").text(data.name);
-        //   $('#picture').attr("src", data.picture);
-        //   // Show the modal with the best match 
-        //   $("#resultsModal").modal('toggle');
-        // });
-        //           console.log(data);
-        //           if(data){
-        //             console.log('submitting')
-        //           }
-        //           else{console.log('umm something is broken')
-        //         }
+          $("#matchName").text(data.name);
+          $('#picture').attr("src", data.picture);
+          // Show the modal with the best match 
+          $("#resultsModal").modal('toggle');
+        });
+                  console.log(data);
+                  if(data){
+                    console.log('submitting')
+                  }
+                  else{console.log('umm something is broken')
+                }
 
               //clear the form when data is submitted 
                 $("#attract").val("");
@@ -260,14 +259,12 @@ $("#submit").on("click", function(){
                 $("#burbs").val("");
                 $("#adventure").val("");
                 $("#ambitious").val("");
-                })
+                });
 
-    });
+});
+    
 
 
 </script>
 
-<!-- pending
-image upload 
-modal to display user answers 
- -->
+
