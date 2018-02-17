@@ -48,10 +48,11 @@
                         
 
                         <div>
+                          <input>
                           <label >Upload an image:
                              <input type='file' />
                           <br>
-                          <img src="#" id ="picture">
+                          <img src="#" id ="picture" alt ="" height=100 width=50>
                           </label>
                        
                         </div>
@@ -85,7 +86,7 @@
               </div>
               <!-- Question 3 -->
               <div class="form-group">
-                <label for="question-three">3. I don't want my partner to be a smoke.</label>
+                <label for="question-three">3. I don't want my partner to be a smoker.</label>
                 <select data-placeholder="" class="chosen-select" id="smoke">
                   <option value=""></option>
                   <option value="1">1 (Agree)</option>
@@ -205,18 +206,32 @@
 
   </div>
 
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Your friends</h4>
+      <h5 id="matchName"></h5>
+      <img id = "matchPic" src="" alt="No Image" width = 250pc>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Complete</a>
+    </div>
+  </div>
+
 </body>
 </html>
 
 <script type="text/javascript">
 
-    // $(document).ready(){
+    $(document).ready(function(){
+
+
 $("#submit").on("click", function(){
   event.preventDefault();
 
    var newFriend ={
          "name": $("#userName").val().trim(),
-        // "picture": $("#picture").val().trim(),
+         "picture": $("#picture").val().trim(),
          "score": [
                 Number($("#attract").val().trim()),
                 Number($("#job").val().trim()),
@@ -233,21 +248,18 @@ $("#submit").on("click", function(){
 
       }
       console.log(newFriend);
+      var currentURL = window.location.origin; 
+
+      $.post(currentURL + "/api/friends", newFriend, function(data){
+        $("#matchName").text(data.name);
+        $("#matchPic").attr("src", data.picture); 
+
+      })
 
                 $.post("/api/friends", newFriend, function(data){
 
                  
-        //   $("#matchName").text(data.name);
-        //   $('#picture').attr("src", data.picture);
-        //   // Show the modal with the best match 
-        //   $("#resultsModal").modal('toggle');
-        // });
-        //           console.log(data);
-        //           if(data){
-        //             console.log('submitting')
-        //           }
-        //           else{console.log('umm something is broken')
-        //         }
+     
 
               //clear the form when data is submitted 
                 $("#attract").val("");
@@ -263,11 +275,8 @@ $("#submit").on("click", function(){
                 })
 
     });
+});
 
 
 </script>
 
-<!-- pending
-image upload 
-modal to display user answers 
- -->
