@@ -36,7 +36,7 @@ var totalDifference = 0
 
 			for(var a = 0; a < 10; a++){
 				
-				totalDifference += Math.abs(parseInt(newFriend[i].scores[a]) - parseInt(addFriend[a]));
+				totalDifference += Math.abs(parseInt(newFriend[i].scores[a]) - parseInt(friendScores[a]));
 				
 				if (totalDifference <= youMatched.matchDifference){
 
