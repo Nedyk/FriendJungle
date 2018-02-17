@@ -206,20 +206,21 @@
 
   </div>
 
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Your friends</h4>
-      <h5 id="matchName"></h5>
-      <img id = "matchPic" src="" alt="No Image" width = 250pc>
+  
+   <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Best Match</h4>
+      </div>
+      <div class="modal-body" id="modalText">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Complete</a>
-    </div>
-  </div>
 
-</body>
-</html>
+  
+
 
 <script type="text/javascript">
 
@@ -249,14 +250,25 @@ $("#submit").on("click", function(){
       }
       console.log(newFriend);
       var currentURL = window.location.origin; 
+    
 
       $.post(currentURL + "/api/friends", newFriend, function(data){
-        $("#matchName").text(data.name);
-        $("#matchPic").attr("src", data.picture); 
+        console.log(data);
 
+        $("#modalText").text("");
+        var div = $("<div>");
+        var titleName = $("<h3>");
+        var photo = $("<img>");
+        titleName.text(data.name);
+        photo.css("width", "350");
+        photo.attr("src", data.photo);
+        div.append(titleName);
+        div.append(photo);
+        $("#modalText").append(div);
+        
       })
 
-                $.post("/api/friends", newFriend, function(data){
+
 
                  
      
@@ -272,11 +284,14 @@ $("#submit").on("click", function(){
                 $("#burbs").val("");
                 $("#adventure").val("");
                 $("#ambitious").val("");
-                })
+                
 
     });
 });
 
 
 </script>
+</body>
+</html>
+
 
